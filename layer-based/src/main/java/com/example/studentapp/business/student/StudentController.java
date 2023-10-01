@@ -4,7 +4,8 @@ import com.example.studentapp.presentation.student.StudentService;
 import com.example.studentapp.presistance.student.StudentDto;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("/v1/api/students")
+@RequestMapping("/v1/api/students")
+@RestController
 public class StudentController {
 
     private StudentService studentService;
