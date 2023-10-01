@@ -2,13 +2,15 @@ package com.example.studentapp.business.student;
 
 import com.example.studentapp.presentation.student.StudentService;
 import com.example.studentapp.presistance.student.StudentDto;
+import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/v1/api/students")
 @RestController
+@AllArgsConstructor
 public class StudentController {
 
-    private StudentService studentService;
+    private final StudentService studentService;
 
     @PostMapping
     public StudentDto addNewStudent(@RequestBody StudentDto student){
